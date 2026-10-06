@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Você decide o futuro da IA</title>
-</head>
-<body>
-    <div class="caixa-principal">
-        <h1>Você decide o futuro da IA</h1>
-        <div class="caixa-perguntas"></div>
-        <div class="caixa-alternativas"></div>
-        <div class="caixa-resultado">
-            <p class="texto-resultado"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Quiz interativo sobre o impacto da inteligência artificial no futuro e na educação."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Thomas decide o futuro da IA</title>
+  </head>
+  <body>
+    <main class="app">
+      <header class="topo">
+        <p class="eyebrow">Simulação educativa</p>
+        <h1>Thomas decide o futuro da IA</h1>
+      </header>
+
+      <section class="quiz" aria-live="polite">
+        <div class="progresso">
+          <span id="contador-pergunta">Pergunta 1 de 5</span>
+          <div class="barra-progresso" aria-hidden="true">
+            <span id="barra-progresso"></span>
+          </div>
         </div>
-    </div>
+
+        <div class="card">
+          <p id="enunciado" class="enunciado"></p>
+          <div id="alternativas" class="alternativas"></div>
+        </div>
+      </section>
+
+      <section id="resultado" class="resultado" hidden>
+        <h2>Seu futuro com IA será...</h2>
+        <p id="titulo-futuro" class="titulo-futuro"></p>
+        <p id="texto-resultado"></p>
+        <button id="reiniciar" class="botao-principal" type="button">
+          Recomeçar
+        </button>
+      </section>
+    </main>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
